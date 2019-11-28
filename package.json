@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "./dist/server/index.js",
+  "main": "./dist/server.js",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf && rm -rf ./dist/*",
@@ -13,7 +13,9 @@
     "build-client": "cross-env NODE_ENV=production webpack -p --progress",
     "start-client": "cross-env NODE_ENV=development && yarn run clean && webpack --debug --watch",
     "prettier": "prettier src/**/*",
-    "dev": "concurrently --kill-others \"tsc -p ./tsconfig-server.json -w\" \"nodemon dist/server/index.js\""
+    "start-server-old": "concurrently --kill-others \"tsc -p ./tsconfig-server.json -w\" \"nodemon dist/server/index.js\"",
+    "start-server": "nodemon dist/server.js",
+    "dev": "yarn clean && webpack --watch"
   },
   "dependencies": {
     "@types/express-session": "^1.15.16",
@@ -31,8 +33,10 @@
     "@types/react": "16.8.8",
     "@types/react-dom": "16.8.2",
     "@types/styled-components": "4.4.0",
+    "@types/webpack-env": "^1.14.1",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.0.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.1",

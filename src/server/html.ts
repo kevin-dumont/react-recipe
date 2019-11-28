@@ -6,7 +6,9 @@ const html = ({ body }: { body: string }) => `
     <body style="margin:0">
       <div id="app">${body}</div>
     </body>
-    <script src="dist/main.js" defer></script>
+    <script defer crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script defer src="main.js" defer></script>
   </html>
 `;
 

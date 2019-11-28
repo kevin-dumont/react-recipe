@@ -1,11 +1,11 @@
 import Rating from "../components/Rating";
 import { ComponentStory } from "entities";
-import { SchemaTypes } from "object-editor-react";
 
 const story: ComponentStory = {
   title: "Rating",
   props: {
-    name: SchemaTypes.string({ required: true }),
+    name: { type: "string", required: true },
+    toto: { type: "boolean", required: true },
   },
   component: Rating,
   initialPropValues: {

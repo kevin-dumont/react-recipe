@@ -18,4 +18,6 @@ server.get("/", (req, res) => {
   res.send(html({ body }));
 });
 
-server.listen(port, () => console.log("🚀  Storeact is listening on url http://localhost:3000 !"));
+server.listen(port, () => {
+  console.log("🚀  Storeact is listening on url http://localhost:3000 !");
+});

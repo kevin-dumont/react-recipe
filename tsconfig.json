@@ -1,22 +1,21 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["esnext", "dom"],
     "allowJs": true,
     "allowUnreachableCode": false,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["esnext", "dom"],
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "module": "commonjs",
     "noEmitOnError": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "es5",
-    "outDir": "./dist"
+    "esModuleInterop": true
   },
   "include": ["./definitions/**/*", "./src/client/**/*"]
 }
